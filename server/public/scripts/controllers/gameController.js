@@ -1,8 +1,9 @@
-colorBlocks.controller('GameController', ['$scope', function($scope) {
+colorBlocks.controller('GameController', ['$scope', 'DataFactory', function($scope, DataFactory) {
 
 console.log('game controller running');
-$scope.colors = ['red', 'blue', 'papayawhip', 'green'];
-
+//$scope.colors = ['red', 'blue', 'papayawhip', 'green'];5
+$scope.dataFactory = DataFactory;
+$scope.colors = $scope.dataFactory.colorsArray;
 // start game
 init();
 
